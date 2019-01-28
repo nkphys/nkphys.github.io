@@ -1,0 +1,175 @@
+#img01 {
+  position: absolute;
+  left: 900px;
+  top: 150px;
+  z-index: 1;
+}
+
+
+#grad1 {
+  height: 100%;
+  background-color: #ECF2F7; /* For browsers that do not support gradients */
+  background-image: linear-gradient(#ECF2F7 , #B1A7F7); /* Standard syntax (must be last) */
+}
+
+
+#leftpanel {
+  height: 100%;
+  background-color: #6600cc; /* For browsers that do not support gradients */
+  color: black;
+  font-family: serif;
+  font-size: 300%;
+}
+
+#p01  {
+  background-color:#36303D;
+  color: white;
+  font-family: serif;
+  font-size: 120%;
+  text-align:justify;
+  padding-right: 280px;
+  padding-left: 50px;
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+
+#p02  {
+  color: black;
+  font-family: serif;
+  font-size: 150%;
+  text-align:justify;
+  padding-right: 300px;
+  padding-left: 100px;
+  padding-top: 20px;
+  padding-bottom: 00px;
+}
+
+#p03  {
+  color: black;
+  font-family: serif;
+  font-size: 150%;
+  text-align:justify;
+  padding-right: 300px;
+  padding-left: 100px;
+  padding-top: 60px;
+  padding-bottom: 00px;
+}
+
+#p04  {
+  color: black;
+  font-family: serif;
+  font-size: 100%;
+  text-align:justify;
+  padding-right: 0px;
+  padding-left: 100px;
+  padding-top: -100px;
+  padding-bottom: 0px;
+}
+
+#h01  {
+  color: black;
+  font-family: serif;
+  font-size: 300%;
+}
+
+/*
+<meta name="viewport" content="width=device-width, initial-scale=1">
+*/
+/*
+input.MyButton {
+  border-radius: 4px;
+  background-color: #36303D;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  display: inline-block;
+}
+input.MyButton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+input.MyButton span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+input.MyButton:hover {
+  padding-right: 100px;
+  background-color: black;
+}
+
+input.MyButton:hover:{
+  opacity: 0.0;
+  right: 0;
+}
+*/
+
+/* Split the screen in half */
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.leftcolumn {
+  height: 100%;
+  width: 20%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.rightcolumn {
+  height: 100%;
+  width: 80%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+}
+
+
+/* Control the right side */
+.right {
+  right: 0;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
