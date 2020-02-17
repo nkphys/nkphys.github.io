@@ -4,18 +4,6 @@
 <head>
 <title>Home</title>
 <script>
-function openPublications() {
-  window.open("publications.html", "_self");
-}
-function openTalks() {
-  window.open("talks.html", "_self");
-}
-function openResearch_Interests() {
-  window.open("research_interests.html", "_self");
-}
-function openCV() {
-  window.open("cv.html", "_self");
-}
 function openMiscellaneous() {
   window.open("Miscellaneous.html", "_self");
 }
@@ -69,6 +57,53 @@ background-color: black;
   opacity: 1;
   right: 0;
 }
+
+.button2 {
+  border-radius: 10px;
+  background-color: #315bbd;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+  width: 800px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button2 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.button2:hover {
+background-color: #1b3269;
+}
+
+.button2:hover span {
+  padding-right: 35px;
+
+}
+
+.button2:hover span:after {
+  background-color: black;
+  opacity: 1;
+  right: 0;
+}
+
+
 </style>
 <!--<meta charset="UTF-8">-->
 
@@ -122,6 +157,8 @@ background-color: black;
 </style>
 
 
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 </head>
 <body>
@@ -129,14 +166,16 @@ background-color: black;
 <div class="rightcolumn right" id="grad1">
 
 <h1 id="h01">
-<center>Curriculum Vitae</center>
+<center>Real space decay exponents in the momentum space</center>
 </h1>
-
-<p id="p01">
-Coming soon
-<br>
+<section>
+<h1>Exponential decay in 1-d lattice</h1>
+<p>
+<ol>
+\( S(i, j) = Ae^{-\beta|i−j|} \) , and \( S(q) =  \sum_{i,j} S(i, j) e^{\iota(i-j)}q \). For discrete system, \( S(q=0)  = A \frac{1+e^{\beta}}{1-e^{-\beta}}  -  \frac{2Ae^{-\beta}(1-e^{-\beta L}) }{L(1-e^{-\beta})^{2} }    \). Hence \( S(q=0) \) increases exponentially fast with increasing system size and converges to \( A \frac{1+e^{-\beta}}{1-e^{-\beta}} \).
+</ol>
 </p>
-
+</section>
 
 
 </div>
@@ -147,15 +186,11 @@ Coming soon
   <div class="centered">
 <form>
 <button class="button" type="button" onclick="openHome()"><span>Home </span></button>
-<button class="button" type="button" onclick="openPublications()"><span>Publications </span></button>
-<button class="button" type="button" onclick="openTalks()"><span>Talks </span></button>
-<button class="button" type="button" onclick="openResearch_Interests()"><span>Research Interests </span></button>
-<button class="button" type="button" onclick="openCV()"><span>CV </span></button>
 <button class="button_two" type="button" onclick="openMiscellaneous()"><span> Miscellaneous </span></button>
-</form>
-	
+</form>	
   </div>
 </div>
+
 
 </body>
 </html>

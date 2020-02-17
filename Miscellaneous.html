@@ -4,23 +4,14 @@
 <head>
 <title>Home</title>
 <script>
-function openPublications() {
-  window.open("publications.html", "_self");
-}
-function openTalks() {
-  window.open("talks.html", "_self");
-}
-function openResearch_Interests() {
-  window.open("research_interests.html", "_self");
-}
-function openCV() {
-  window.open("cv.html", "_self");
-}
 function openMiscellaneous() {
   window.open("Miscellaneous.html", "_self");
 }
 function openHome() {
   window.open("index.html", "_self");
+}
+function openRSDinMS() {
+  window.open("RSDinMS.html", "_self");
 }
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -69,6 +60,53 @@ background-color: black;
   opacity: 1;
   right: 0;
 }
+
+.button2 {
+  border-radius: 10px;
+  background-color: #315bbd;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+  width: 800px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button2 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.button2:hover {
+background-color: #1b3269;
+}
+
+.button2:hover span {
+  padding-right: 35px;
+
+}
+
+.button2:hover span:after {
+  background-color: black;
+  opacity: 1;
+  right: 0;
+}
+
+
 </style>
 <!--<meta charset="UTF-8">-->
 
@@ -122,6 +160,8 @@ background-color: black;
 </style>
 
 
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 </head>
 <body>
@@ -129,14 +169,22 @@ background-color: black;
 <div class="rightcolumn right" id="grad1">
 
 <h1 id="h01">
-<center>Curriculum Vitae</center>
+<center>Miscellaneous</center>
 </h1>
 
 <p id="p01">
-Coming soon
+This page consists various things.
 <br>
 </p>
-
+<p>
+<ol>
+<li><a href="https://drive.google.com/open?id=1EtzbpHvk_wkJpv35zmD5uBKGqQ9VikTx" target="_blank">Deriving decay exponents from scaling of Fourier transforms of correlations</a>.</li>
+<br>
+<button class="button2" type="button2" onclick="openRSDinMS()"><span> Real space decay exponents in the momentum space. </span></button>
+<br>
+<button class="button2" type="button2" onclick="openHome()"><span> .... </span></button>
+</ol>
+</p>
 
 
 </div>
@@ -147,15 +195,11 @@ Coming soon
   <div class="centered">
 <form>
 <button class="button" type="button" onclick="openHome()"><span>Home </span></button>
-<button class="button" type="button" onclick="openPublications()"><span>Publications </span></button>
-<button class="button" type="button" onclick="openTalks()"><span>Talks </span></button>
-<button class="button" type="button" onclick="openResearch_Interests()"><span>Research Interests </span></button>
-<button class="button" type="button" onclick="openCV()"><span>CV </span></button>
 <button class="button_two" type="button" onclick="openMiscellaneous()"><span> Miscellaneous </span></button>
-</form>
-	
+</form>	
   </div>
 </div>
+
 
 </body>
 </html>
