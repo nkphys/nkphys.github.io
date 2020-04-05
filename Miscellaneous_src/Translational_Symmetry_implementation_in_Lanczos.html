@@ -166,24 +166,49 @@ background-color: black;
 <div class="rightcolumn right" id="grad1">
 
 <h1 id="h01">
-<center>Translational symmetry implementation on fermionic models in exact diagonalization</center>
+<center>Translational symmetry implementation on fermionic models in Lanczos/exact diagonalization.</center>
 </h1>
 <section>
-<h1>Let's take an example 2d-lattice</h1>
-<p>
-<ol>
+<h1><u>Let's take an example 2d-lattice:</u></h1>
+<p style="font-size:24px">
+
+Eigenvectors of translational operator can be constructed as following:
+<br>
+\(|n,\mathbf{k} \rangle = \frac{1}{\sqrt{N_{n,\mathbf{k}}}} \displaystyle \sum_{r_{x}=0}^{L_{x}-1} \sum_{r_{y}=0}^{L_{y}-1} e^{i\mathbf{k}\cdot\mathbf{r}} ({T_{x}})^{r_{x}} ({T_{y}})^{r_{y}} |n\rangle     \)
+<br>
+where, \( r_{x}, r_{y} \) are integers, \( T_{x} \) and \( T_{y} \) are translational operators for x and y direction respectively, and \( |n \rangle\) is multi-particle state in "real space basis" 
+and this state is also the representative state for the its class. In real space basis we have to choose a conventation for  the ordering of the fermionic operators 
+and we choose 
+ \( |n \rangle=c_{n_{0},\uparrow}^{\dagger}c_{n_{1},\uparrow}^{\dagger}...c_{n_{N_{\uparrow}}, \uparrow}^{\dagger} c_{n'_{0},\downarrow}^{\dagger}c_{n'_{1},\downarrow}^{\dagger}...c_{n'_{N_{\downarrow}},\downarrow}^{\dagger}|0\rangle\) , 
+ where \(N_{\uparrow}\) and \( N_{\downarrow} \) are number of spin up and down electrons, 
+ \( n_{0} > n_{1}>n_{2}... > n_{N_{\uparrow}} \), and \( n'_{0} > n'_{1}>n'_{2}...>n'_{N_{\downarrow}} \). In previous equation, we have merged 2-dimensional lattice sites using  \( n_{r} = r_{x} + r_{y}L_{x}\).
+<br>
+For a given representative state \( | n \rangle\) , the normalizaton constants \( N_{n\mathbf{k}} \) have to be calculated  for all \( \mathbf{k}'s \)  and saved 
+(ofcourse, it should be checked that the  \( \mathbf{k}\) is permitted or not).
+\begin{equation}
+\langle n,\mathbf{k} |  n,\mathbf{k} \rangle = \frac{1}{N_{n,\mathbf{k}}} \displaystyle \sum_{r_{x},r'_{x}, r_{y}, r'_{y}} e^{i\mathbf{k}\cdot (\mathbf{r}-\mathbf{r}')} \langle n 
+|( T_{x}^{r'_{x}} T_{y}^{r'_{y}} )^{\dagger} T_{x}^{r_{x}} T_{y}^{r_{y}} | n \rangle =1
+\end{equation}
+As we know \( T^{\dagger} = T^{-1} \), and \( [T_{x}, T_{y}] =0\), above equation can written as following:
+<br>
+\( N_{n, \mathbf{k}}  = \sum_{r_{x},r'_{x}, r_{y}, r'_{y}} e^{i\mathbf{k}\cdot (\mathbf{r}-\mathbf{r}')} \langle n|  T_{x}^{(r_{x} - r'_{x})} T_{y}^{(r_{y} - r'_{y})} |n\rangle   \)
+
 
 
 <!--
 \( S(i, j) = Ae^{-\beta|i−j|} \) , and \( S(q) = \frac{1}{L} \sum_{i,j} S(i, j) e^{\iota(i-j)}q \). For discrete system, \( S(q=0)  = A \frac{1+e^{\beta}}{1-e^{-\beta}}  -  \frac{2Ae^{-\beta}(1-e^{-\beta L}) }{L(1-e^{-\beta})^{2} }    \). Hence \( S(q=0) \) increases exponentially fast with increasing system size and converges to \( A \frac{1+e^{-\beta}}{1-e^{-\beta}} \).
 -->
 
-</ol>
 </p>
 </section>
 
+<br>
+<br>
+NOT COMPLETED !!! (Last update: 4th April, 2020)
 
 </div>
+
+
 
 
 
