@@ -10,9 +10,6 @@ function openMiscellaneous() {
 function openHome() {
   window.open("index.html", "_self");
 }
-function openRSDinMS() {
-  window.open("Miscellaneous_src/RSDinMS.html", "_self");
-}
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -169,22 +166,16 @@ background-color: black;
 <div class="rightcolumn right" id="grad1">
 
 <h1 id="h01">
-<center>Miscellaneous</center>
+<center>Real space decay exponents in the momentum space</center>
 </h1>
-
-<p id="p01">
-This page consists various things.
-<br>
-</p>
+<section>
+<h1>Exponential decay in 1-d lattice</h1>
 <p>
 <ol>
-<li><a href="https://drive.google.com/open?id=1EtzbpHvk_wkJpv35zmD5uBKGqQ9VikTx" target="_blank">Deriving decay exponents from scaling of Fourier transforms of correlations</a>.</li>
-<br>
-<button class="button2" type="button2" onclick="openRSDinMS()"><span> Real space decay exponents in the momentum space. </span></button>
-<br>
-<button class="button2" type="button2" onclick="openHome()"><span> .... </span></button>
+\( S(i, j) = Ae^{-\beta|i−j|} \) , and \( S(q) = \frac{1}{L} \sum_{i,j} S(i, j) e^{\iota(i-j)}q \). For discrete system, \( S(q=0)  = A \frac{1+e^{\beta}}{1-e^{-\beta}}  -  \frac{2Ae^{-\beta}(1-e^{-\beta L}) }{L(1-e^{-\beta})^{2} }    \). Hence \( S(q=0) \) increases exponentially fast with increasing system size and converges to \( A \frac{1+e^{-\beta}}{1-e^{-\beta}} \).
 </ol>
 </p>
+</section>
 
 
 </div>
