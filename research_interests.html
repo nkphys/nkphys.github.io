@@ -1,162 +1,64 @@
+
 <!DOCTYPE html>
-<html lang="en-US">
-<link rel="stylesheet" href="styles.css">
+<html lang="en">
 <head>
-<title>Home</title>
-<script>
-function openPublications() {
-  window.open("publications.html", "_self");
-}
-function openTalks() {
-  window.open("talks.html", "_self");
-}
-function openResearch_Interests() {
-  window.open("research_interests.html", "_self");
-}
-function openCV() {
-  window.open("cv.html", "_self");
-}
-function openMiscellaneous() {
-  window.open("Miscellaneous.html", "_self");
-}
-function openHome() {
-  window.open("index.html", "_self");
-}
-</script>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.button {
-  border-radius: 4px;
-  background-color: #36303D;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 18px;
-  padding: 20px;
-  width: 200px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-}
-
-.button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -10px;
-  transition: 0.5s;
-}
-
-.button:hover {
-background-color: black;
-}
-
-.button:hover span {
-  padding-right: 35px;
-  
-}
-
-.button:hover span:after {
-  background-color: black;
-  opacity: 1;
-  right: 0;
-}
-</style>
-<!--<meta charset="UTF-8">-->
-
-
-<style>
-.button_two {
-  border-radius: 4px;
-  background-color: #36303D;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 18px;
-  padding: 20px;
-  width: 200px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-  opacity: 0.5;
-}
-
-.button_two span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.button_two span:after {
-  content: '';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -10px;
-  transition: 0.5s;
-}
-
-.button_two:hover {
-background-color: black;
-}
-
-.button_two:hover span {
-  padding-right: 35px;
-
-}
-
-.button_two:hover span:after {
-  background-color: black;
-  opacity: 1;
-  right: 0;
-}
-</style>
-
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research Experience - Nitin Kaushal</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="research_interests.html" class="active">Research Experience</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="Miscellaneous.html">Miscellaneous</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<div class="rightcolumn right" id="grad1">
+  <main class="container research-experience-content">
+    <h1>Research Experience</h1>
 
-<h1 id="h01">
-<center>Research Interests</center>
-</h1>
+    <section>
+      <h2>Overview</h2>
+      <p>I am a condensed matter theorist studying emergent quantum phases in correlated-electron lattice models. My work focuses on how electron correlations, multiple orbitals, and spin-orbit coupling shape ground-state and dynamical behavior in systems such as excitonic insulators, orbital-selective Mott phases, moiré Wigner crystals, and altermagnets. More recently, I have also explored quantum annealing for non-equilibrium spin dynamics near quantum criticality.</p>
+      <p>I use complementary numerical approaches: unbiased methods (DMRG and exact diagonalization/Lanczos) together with controlled approximate methods (unrestricted Hartree-Fock, Monte Carlo, and Langevin dynamics). This multi-method strategy allows me to address diverse regimes of quantum materials. I also developed the highly efficient exact diagonalization package <a href="https://github.com/nkphys/SCS_Lanczos" target="_blank"><em>SCS_Lanczos</em></a>, which has been used in several collaborative studies.</p>
+    </section>
 
-<p id="p01">
-Coming soon
-<br>
-</p>
+    <section>
+      <h2>Selected Research Topics</h2>
+      <h3>Altermagnetism in Modified Lieb Lattice Hubbard Model</h3>
+      <p>We investigated interaction-driven altermagnetism on the Lieb lattice as a model for quasi-2D oxychalcogenides. Using unrestricted Hartree-Fock and exact diagonalization, we identified spin-1/2 altermagnetic Mott insulating ground states at fillings of 2 and 4 electrons per unit cell.</p>
+      <p>We found characteristic spin splitting in both electronic and magnon spectra, consistent with an effective spin-1/2 Heisenberg description. We also obtained evidence for altermagnetic metallic behavior under electron and hole doping, including quasi-one-dimensional Fermi surfaces with $d_{x^2-y^2}$-wave spin splitting.</p>
+    </section>
 
+    <section>
+      <h3>Generalized Wigner Crystals in Twisted Transition Metal Dichalcogenides</h3>
+      <p>We studied moiré Hubbard physics in $\Gamma$-valley twisted TMD homobilayers (MoS2, MoSe2, WS2), where honeycomb moiré bands host strong correlation effects. Within this framework, we predicted a sequence of generalized Wigner crystals at fractional fillings using unrestricted Hartree-Fock.</p>
+      <p>These predictions were later supported by experiments on twisted MoSe2 bilayers, alongside related observations in other $\Gamma$-valley systems. In complementary work, we derived a moiré Kanamori-Hubbard model through Wannierization of composite low-energy bands, extending the theoretical description beyond standard multiorbital models.</p>
+    </section>
 
+    <section>
+      <h3>Spin-Orbit Coupling Induced Magnetic Excitonic Insulator</h3>
+      <p>We studied multi-orbital Hubbard models with strong atomic spin-orbit coupling, motivated by 4d/5d transition-metal oxides where single-orbital descriptions are inadequate. Using DMRG and unrestricted Hartree-Fock, we established antiferromagnetism driven by spin-orbit exciton condensation at momentum $\pi$.</p>
+      <p>In follow-up studies with dynamical DMRG and exact diagonalization, we clarified the collective dynamics of the excitonic condensate and identified a multi-branch optical mode in addition to a low-energy Goldstone-like mode. This optical response provides a practical experimental fingerprint (e.g., for inelastic neutron scattering) in candidate materials including OsCl4, Sr3NaIrO6, Sr2YIrO6, Ba2YIrO6, and Ca2RuO4.</p>
+    </section>
 
-</div>
+    <section>
+      <h3>Quantum Computation via Quantum Annealing</h3>
+      <p>We use coherent quantum annealing as a practical route to simulate non-equilibrium magnetic dynamics near quantum critical points. In collaboration with D-Wave Systems, we used superconducting annealers to study Schrödinger dynamics across multiple spin models, including higher-dimensional spin glasses.</p>
+      <p>By benchmarking against state-of-the-art classical methods (tensor-network approaches such as MPS/PEPS and neural-network methods), we observed area-law entanglement trends and identified regimes where classical computational cost rises rapidly. These results position quantum annealers as promising tools for dynamics that are difficult to simulate classically.</p>
+    </section>
 
+  </main>
 
-
-<div class="leftcolumn left" id="leftpanel">
-  <div class="centered">
-<form>
-<button class="button" type="button" onclick="openHome()"><span>Home </span></button>
-<button class="button" type="button" onclick="openPublications()"><span>Publications </span></button>
-<button class="button" type="button" onclick="openTalks()"><span>Talks </span></button>
-<button class="button" type="button" onclick="openResearch_Interests()"><span>Research Interests </span></button>
-<button class="button" type="button" onclick="openCV()"><span>CV </span></button>
-<button class="button_two" type="button" onclick="openMiscellaneous()"><span> Miscellaneous </span></button>
-</form>
-	
-  </div>
-</div>
-
+  <footer>
+    <p>&copy; 2026 Nitin Kaushal</p>
+  </footer>
 </body>
 </html>
 

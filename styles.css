@@ -1,204 +1,200 @@
-#img01 {
-  position: absolute;
-  left: 900px;
-  top: 150px;
-  z-index: 1;
+/* CV PDF-style layout */
+.cv-pdf-layout {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  color: #222;
 }
 
-
-#grad1 {
-  height: 100%;
-  background-color: #ECF2F7; /* For browsers that do not support gradients */
-  background-image: linear-gradient(#ECF2F7 , #B1A7F7); /* Standard syntax (must be last) */
+.cv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 1.2rem;
+  margin-bottom: 2rem;
+}
+.cv-header-left {
+  flex: 1 1 50%;
+}
+.cv-header-left h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.2rem;
+  color: var(--primary-color);
+}
+.cv-title {
+  font-size: 1.2rem;
+  color: #36303D;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.cv-header-right {
+  flex: 1 1 50%;
+  text-align: right;
+  font-size: 1rem;
+  color: #444;
+}
+.cv-section {
+  margin-bottom: 2rem;
+}
+.cv-section h2 {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  border-left: 4px solid var(--primary-color);
+  padding-left: 0.7rem;
+}
+.cv-indent {
+  margin-left: 2.5rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+.cv-section ul {
+  margin-left: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.cv-section ul li {
+  margin-bottom: 0.3rem;
+}
+@media (max-width: 700px) {
+  .cv-header {
+    flex-direction: column;
+    text-align: left;
+    gap: 1rem;
+  }
+  .cv-header-right {
+    text-align: left;
+  }
+  .cv-pdf-layout {
+    padding: 1rem 0.5rem;
+  }
+  .cv-indent, .cv-section ul {
+    margin-left: 1rem;
+  }
+}
+:root {
+  --primary-color: #265073cd;
+  --secondary-color: #1f2a44;
+  --background-start: #f4f8fc;
+  --background-end: #dbe8f5;
+  --text-color-light: #fff;
+  --text-color-dark: #333;
 }
 
-
-#leftpanel {
-  height: 100%;
-  background-color: #6600cc; /* For browsers that do not support gradients */
-  color: black;
-  font-family: serif;
-  font-size: 300%;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-#p01  {
-  background-color:#36303D;
-  color: white;
-  font-family: serif;
-  font-size: 120%;
-  text-align:justify;
-  padding-right: 20%;
-  padding-left: 2%;
-  padding-top: 0%;
-  padding-bottom: 1%;
-  /* position: absolute */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-color-dark);
+  background: linear-gradient(var(--background-start), var(--background-end));
+  min-height: 100vh;
+  line-height: 1.6;
 }
 
-#p02  {
-  color: black;
-  font-family: serif;
-  font-size: 150%;
-  text-align:justify;
-  padding-right: 300px;
-  padding-left: 100px;
-  padding-top: 20px;
-  padding-bottom: 00px;
+.navbar {
+  background: var(--primary-color);
 }
 
-#p03  {
-  color: black;
-  font-family: serif;
-  font-size: 150%;
-  text-align:justify;
-  padding-right: 10%;
-  padding-left: 2%;
-  padding-top: 0%;
-  padding-bottom: 0%;
+.navbar ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-#p03_2  {
-  color: black;
-  font-family: serif;
-  font-size: 150%;
-  text-align:justify;
-  padding-right: 10%;
-  padding-left: 2%;
-  padding-top: 0%;
-  padding-bottom: 0%;
+.navbar li {
+  margin: 0.5rem 1rem;
 }
 
-
-#p03_3  {
-  color: black;
-  font-family: serif;
-  font-size: 150%;
-  text-align:justify;
-  padding-right: 0%;
-  padding-left: 80%;
-  padding-top: -10%;
-  padding-bottom: 0%;
-}
-
-
-#p04  {
-  color: black;
-  font-family: serif;
-  font-size: 100%;
-  text-align:justify;
-  padding-right: 0px;
-  padding-left: 100px;
-  padding-top: -100px;
-  padding-bottom: 0px;
-}
-
-#h01  {
-  color: black;
-  font-family: serif;
-  font-size: 350%;
-  padding-top: 20%
-  padding-bottom: 25%;
-  padding-left: 0%;
-  positon: absolute
-}
-
-/*
-<meta name="viewport" content="width=device-width, initial-scale=1">
-*/
-/*
-input.MyButton {
+.navbar a {
+  color: var(--text-color-light);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
   border-radius: 4px;
-  background-color: #36303D;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 18px;
-  padding: 20px;
-  width: 200px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-  display: inline-block;
-}
-input.MyButton span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
+  transition: background 0.3s;
 }
 
-input.MyButton span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
+.navbar a:hover {
+  background: var(--secondary-color);
 }
 
-input.MyButton:hover {
-  padding-right: 100px;
-  background-color: black;
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 960px;
+  margin: 2rem auto;
+  gap: 2rem;
+  padding: 0 1rem;
 }
 
-input.MyButton:hover:{
-  opacity: 0.0;
-  right: 0;
-}
-*/
-
-/* Split the screen in half */
-.split {
-  height: 100%;
-  width: 50%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
+.profile {
+  flex: 1 1 60%;
 }
 
-.leftcolumn {
-  height: 100%;
-  width: 15%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
+.contact {
+  flex: 1 1 35%;
 }
 
-.rightcolumn {
-  height: 100%;
-  width: 85%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
-}
-
-/* Control the left side */
-.left {
-  left: 0;
-}
-
-
-/* Control the right side */
-.right {
-  right: 0;
-}
-
-/* If you want the content centered horizontally and vertically */
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-/* Style the image inside the centered container, if needed */
-.centered img {
-  width: 150px;
+.profile-pic {
+  max-width: 200px;
   border-radius: 50%;
+  float: right;
+  margin: 0 0 1rem 1rem;
+}
+
+.intro {
+  font-size: 1.125rem;
+  text-align: justify;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+}
+
+.social-links li {
+  margin: 0.5rem 0;
+}
+
+.social-links a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+.editor-highlight {
+  color: #0b5fa5;
+  font-weight: 600;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: var(--primary-color);
+  color: var(--text-color-light);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+  .profile-pic {
+    float: none;
+    display: block;
+    margin: 0 auto 1rem;
+  }
 }

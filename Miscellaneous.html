@@ -10,9 +10,6 @@ function openMiscellaneous() {
 function openHome() {
   window.open("index.html", "_self");
 }
-function openRSDinMS() {
-  window.open("Miscellaneous_src/RSDinMS.html", "_self");
-}
 function openTS_Fermion_ED() {
   window.open("Miscellaneous_src/Translational_Symmetry_implementation_in_Lanczos.html", "_self");
 }
@@ -21,7 +18,7 @@ function openTS_Fermion_ED() {
 <style>
 .button {
   border-radius: 4px;
-  background-color: #36303D;
+  background-color: var(--primary-color);
   border: none;
   color: #FFFFFF;
   text-align: center;
@@ -50,7 +47,7 @@ function openTS_Fermion_ED() {
 }
 
 .button:hover {
-background-color: black;
+background-color: var(--secondary-color);
 }
 
 .button:hover span {
@@ -59,14 +56,14 @@ background-color: black;
 }
 
 .button:hover span:after {
-  background-color: black;
+  background-color: var(--secondary-color);
   opacity: 1;
   right: 0;
 }
 
 .button2 {
   border-radius: 10px;
-  background-color: #315bbd;
+  background-color: var(--primary-color);
   border: none;
   color: #FFFFFF;
   text-align: center;
@@ -95,7 +92,7 @@ background-color: black;
 }
 
 .button2:hover {
-background-color: #1b3269;
+background-color: var(--secondary-color);
 }
 
 .button2:hover span {
@@ -104,7 +101,7 @@ background-color: #1b3269;
 }
 
 .button2:hover span:after {
-  background-color: black;
+  background-color: var(--secondary-color);
   opacity: 1;
   right: 0;
 }
@@ -117,7 +114,7 @@ background-color: #1b3269;
 <style>
 .button_two {
   border-radius: 4px;
-  background-color: #36303D;
+  background-color: var(--primary-color);
   border: none;
   color: #FFFFFF;
   text-align: center;
@@ -147,7 +144,7 @@ background-color: #1b3269;
 }
 
 .button_two:hover {
-background-color: black;
+background-color: var(--secondary-color);
 }
 
 .button_two:hover span {
@@ -156,7 +153,7 @@ background-color: black;
 }
 
 .button_two:hover span:after {
-  background-color: black;
+  background-color: var(--secondary-color);
   opacity: 1;
   right: 0;
 }
@@ -181,10 +178,6 @@ This page consists various things.
 </p>
 <p>
 <ol>
-<li><a href="https://drive.google.com/open?id=1EtzbpHvk_wkJpv35zmD5uBKGqQ9VikTx" target="_blank">Deriving decay exponents from scaling of Fourier transforms of correlations</a>.</li>
-<br>
-<button class="button2" type="button2" onclick="openRSDinMS()"><span> Real space decay exponents in the momentum space. </span></button>
-<br>
 <button class="button2" type="button2" onclick="openTS_Fermion_ED()"><span> Translational symmetry implementation in Lanczos/ED. </span></button>
 <br>
 <button class="button2" type="button2" onclick="openHome()"><span> .... </span></button>

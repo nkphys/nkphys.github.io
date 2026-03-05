@@ -1,187 +1,58 @@
 <!DOCTYPE html>
-<html lang="en-US">
-<link rel="stylesheet" href="styles.css">
+<html lang="en">
 <head>
-<title>Home</title>
-<script>
-function openPublications() {
-  window.open("publications.html", "_self");
-}
-function openTalks() {
-  window.open("talks.html", "_self");
-}
-function openResearch_Interests() {
-  window.open("research_interests.html", "_self");
-}
-function openCV() {
-  window.open("cv.html", "_self");
-}
-function openMiscellaneous() {
-  window.open("Miscellaneous.html", "_self");
-}
-function openHome() {
-  window.open("index.html", "_self");
-}
-</script>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.button {
-  border-radius: 4px;
-  background-color: #36303D;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 18px;
-  padding: 20px;
-  width: 200px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-}
-
-.button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -10px;
-  transition: 0.5s;
-}
-
-.button:hover {
-background-color: black;
-}
-
-.button:hover span {
-  padding-right: 35px;
-  
-}
-
-.button:hover span:after {
-  background-color: black;
-  opacity: 1;
-  right: 0;
-}
-</style>
-<!--<meta charset="UTF-8">-->
-
-
-<style>
-.button_two {
-  border-radius: 4px;
-  background-color: #36303D;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 18px;
-  padding: 20px;
-  width: 200px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-  opacity: 0.5;
-}
-
-.button_two span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.button_two span:after {
-  content: '';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -10px;
-  transition: 0.5s;
-}
-
-.button_two:hover {
-background-color: black;
-}
-
-.button_two:hover span {
-  padding-right: 35px;
-
-}
-
-.button_two:hover span:after {
-  background-color: black;
-  opacity: 1;
-  right: 0;
-}
-</style>
-
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nitin Kaushal – Home</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="research_interests.html">Research Experience</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="Miscellaneous.html">Miscellaneous</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<div class="rightcolumn right" id="grad1">
+  <main class="container">
+    <section class="profile">
+      <img src="my_pic.png" alt="Picture of Nitin Kaushal" class="profile-pic">
+      <h1>Nitin Kaushal</h1>
+      <p class="intro">
+        I am currently working as a postdoctoral researcher at the <a href="https://www.ubc.ca/" target="_blank">University of British Columbia</a>, Canada.
+        Previously, I was a postdoc at <a href="https://www.ornl.gov/" target="_blank">Oak Ridge National Laboratory</a>.<br>
+        I obtained my Ph.D. from the <a href="https://www.utk.edu/" target="_blank">University of Tennessee</a> in 2020, under the supervision of <a href="http://sces.phys.utk.edu/" target="_blank">Prof. Elbio Dagotto</a>.<br>
+        My research focuses on the electronic and magnetic properties of strongly correlated electrons in multi-orbital Hubbard models using exact numerical techniques like DMRG and Lanczos Algorithm. These studies are significant for materials where orbital degree of freedom plays an important role, such as transition metal oxides (pnictides, iridates, ruthenates, etc.).<br>
+        I am especially interested in 4d and 5d materials where spin-orbit coupling is large and must be considered in theoretical investigations.
+      </p>
+      <p>For details of my work, please see my <a href="publications.html">publications</a> and <a href="research_interests.html">research experience</a>.</p>
+    </section>
 
-<h1 id="h01">
-Nitin Kaushal
-<img id="img01" src="my_pic_01.png"style = "left:83%; top:20%" alt="Picture of Nitin Kaushal" width="230px" height="230px">
-</h1>
+    <section class="contact">
+      <h2>Contact</h2>
+      <p>
+        <strong>Office Address:</strong><br>
+        ~~<br>
+        <strong>Phone:</strong> (236) 994 2309<br>
+        <strong>Email:</strong> <a href="mailto:kaushalnitin002@gmail.com">kaushalnitin002@gmail.com</a>
+      </p>
+      <h2>Profiles</h2>
+      <ul class="social-links">
+        <li><a href="https://github.com/nkphys" target="_blank">GitHub</a></li>
+        <li><a href="https://scholar.google.com/citations?user=mJcIaHIAAAAJ&hl=en" target="_blank">Google Scholar</a></li>
+        <li><a href="https://www.researchgate.net/profile/Nitin_Kaushal2" target="_blank">ResearchGate</a></li>
+      </ul>
+    </section>
+  </main>
 
-<!--
-<img id="img01" src="my_pic_01.png"style = "postion:absolute; left:40%; top:15%" alt="Picture of Nitin Kaushal" width="250px" height="250px">
---> 
-<p id="p01" style="font-size:200%">
-I am currently working as a postdoctoral researcher in University of British Columbia, Canada. Prior to this I worked, as a postdoc, at  <a href="https://www.ornl.gov/" target="_blank" style="color:white">Oak Ridge National Laboratory</a>. I obtained my Ph.D. from the <a href="https://www.utk.edu/" target="_blank" style="color:white" >University of Tennessee</a> in 2020, where I worked under the supervision of <a href="http://sces.phys.utk.edu/" target="_blank" style="color:white">Prof. Elbio Dagotto</a>. Predominantly I studied the electronic and magnetic properties of strongly correlated electrons in multi-orbital Hubbard models using exact numerical techniques like Density Matrix Renormalization Group (DMRG) theory and Lanczos Algorithm. These kind of exact studies are significant for materials where orbital degree of freedom plays an important role like in transition metal oxides (for example pnictides, iridates, rhutenates etc.). Specifically, currently I am interested in newly emerging field of 4d and 5d materials where Spin orbit coupling is large and hence should be taken into account in theoretical investigations.
-<br>
-For details of my work, please look into my publications.
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<strong>Office Address:</strong><br>
-~~
-<br>
-Phone: (236) 994 2309<br>
-<br>
-<strong>Email Address:</strong><br>
-kaushalnitin002@gmail.com<br>
-</p>
-
-<p id= "p03" style = "top:100%; font-size:200%;">
-<strong>Links to my profiles on :</strong>
-<ul id="p03_2"style="font-size:200%">
-<li><a href="https://github.com/nkphys" target="_blank">GitHub</a></li>
-<li><a href="https://scholar.google.com/citations?user=mJcIaHIAAAAJ&hl=en" target="_blank">Google Scholar</a></li>
-<li><a href="https://www.researchgate.net/profile/Nitin_Kaushal2" target="_blank">Research Gate</a></li>
-</ul>
-</p>
-
-</div>
-
-
-
-<div class="leftcolumn left" id="leftpanel">
-  <div class="centered">
-<form>
-<button class="button" type="button" onclick="openHome()"><span>Home </span></button>
-<button class="button" type="button" onclick="openPublications()"><span>Publications </span></button>
-<button class="button" type="button" onclick="openTalks()"><span>Talks </span></button>
-<button class="button" type="button" onclick="openResearch_Interests()"><span>Research Interests </span></button>
-<button class="button" type="button" onclick="openCV()"><span>CV </span></button>
-<button class="button_two" type="button" onclick="openMiscellaneous()"><span> Miscellaneous </span></button>
-</form>
-	
-  </div>
-</div>
-
+  <footer>
+    <p>&copy; 2026 Nitin Kaushal</p>
+  </footer>
 </body>
 </html>
 
