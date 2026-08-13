@@ -377,6 +377,21 @@ footer {
   width: 100%;
 }
 
+.footer-analytics {
+  margin-top: 0.25rem;
+  font-size: 0.72rem;
+}
+
+.footer-analytics a {
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+}
+
+.footer-analytics a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
 @media (max-width: 600px) {
   .container {
     flex-direction: column;
