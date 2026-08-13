@@ -10,43 +10,101 @@
   <header>
     <nav class="navbar">
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="publications.html">Publications</a></li>
-        <li><a href="research_interests.html">Research Experience</a></li>
+        <li><a href="research_interests.html">Research Interests</a></li>
+        <li><a href="#software-development">Software Development</a></li>
         <li><a href="cv.html">CV</a></li>
         <li><a href="Miscellaneous.html">Miscellaneous</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="container">
-    <section class="profile">
-      <img src="my_pic.png" alt="Picture of Nitin Kaushal" class="profile-pic">
-      <h1>Nitin Kaushal</h1>
-      <p class="intro">
-        I am currently working as a postdoctoral researcher at the <a href="https://www.ubc.ca/" target="_blank">University of British Columbia</a>, Canada.
-        Previously, I was a postdoc at <a href="https://www.ornl.gov/" target="_blank">Oak Ridge National Laboratory</a>.<br>
-        I obtained my Ph.D. from the <a href="https://www.utk.edu/" target="_blank">University of Tennessee</a> in 2020, under the supervision of <a href="http://sces.phys.utk.edu/" target="_blank">Prof. Elbio Dagotto</a>.<br>
-        I am a condensed matter theorist mainly interested in strongly correlated systems.
-      </p>
-      <p>For details of my work, please see my <a href="publications.html">publications</a> and <a href="research_interests.html">research experience</a>.</p>
+  <main class="home-page">
+    <section class="home-hero">
+      <div class="home-intro">
+        <p class="home-eyebrow">Condensed Matter Theorist</p>
+        <h1>Nitin Kaushal</h1>
+        <p class="home-subtitle">Exploring emergent quantum phases in strongly correlated electron systems.</p>
+        <p class="home-affiliation">Postdoctoral Researcher at the <a href="https://www.ubc.ca/" target="_blank" rel="noopener">University of British Columbia</a>, Canada.</p>
+        <div class="home-actions">
+          <a class="primary-action" href="research_interests.html">Explore my research <span aria-hidden="true">→</span></a>
+          <a class="secondary-action" href="publications.html">View publications</a>
+        </div>
+        <div class="hero-contact" aria-label="Contact details and profiles">
+          <a class="contact-detail" href="mailto:kaushalnitin002@gmail.com"><span>Email</span> kaushalnitin002@gmail.com</a>
+          <a class="contact-detail" href="tel:+12369942309"><span>Phone</span> +1 (236) 994-2309</a>
+          <div class="hero-profiles">
+            <a href="https://scholar.google.com/citations?user=mJcIaHIAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+            <a href="https://github.com/nkphys" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.researchgate.net/profile/Nitin_Kaushal2" target="_blank" rel="noopener">ResearchGate</a>
+          </div>
+        </div>
+      </div>
+      <div class="portrait-wrap">
+        <div class="portrait-accent" aria-hidden="true"></div>
+        <img src="my_pic.png" alt="Portrait of Nitin Kaushal" class="home-portrait">
+        <div class="portrait-note">
+          <span class="status-dot" aria-hidden="true"></span>
+          Vancouver, Canada
+        </div>
+      </div>
     </section>
 
-    <section class="contact">
-      <h2>Contact</h2>
-      <p>
-        <strong>Office Address:</strong><br>
-        ~~<br>
-        <strong>Phone:</strong> (236) 994 2309<br>
-        <strong>Email:</strong> <a href="mailto:kaushalnitin002@gmail.com">kaushalnitin002@gmail.com</a>
-      </p>
-      <h2>Profiles</h2>
-      <ul class="social-links">
-        <li><a href="https://github.com/nkphys" target="_blank">GitHub</a></li>
-        <li><a href="https://scholar.google.com/citations?user=mJcIaHIAAAAJ&hl=en" target="_blank">Google Scholar</a></li>
-        <li><a href="https://www.researchgate.net/profile/Nitin_Kaushal2" target="_blank">ResearchGate</a></li>
-      </ul>
+    <section class="home-about">
+      <div class="home-section-title">
+        <h2 class="about-title">About me</h2>
+      </div>
+      <div class="home-about-copy">
+        <p>I am a condensed matter theorist interested in strongly correlated systems. My research examines how electron interactions, multiple orbitals, and spin-orbit coupling give rise to unconventional magnetic and quantum phases.</p>
+        <p>Previously, I was a postdoctoral researcher at <a href="https://www.ornl.gov/" target="_blank" rel="noopener">Oak Ridge National Laboratory</a>. I received my Ph.D. from the <a href="https://www.utk.edu/" target="_blank" rel="noopener">University of Tennessee</a> in 2020 under the supervision of <a href="http://sces.phys.utk.edu/" target="_blank" rel="noopener">Prof. Elbio Dagotto</a>.</p>
+      </div>
     </section>
+
+    <section class="home-focus" aria-labelledby="focus-heading">
+      <div class="focus-header">
+        <h2 id="focus-heading">Research interests</h2>
+      </div>
+      <div class="focus-grid">
+        <a class="focus-card" href="research_interests.html">
+          <span class="focus-number">01</span>
+          <h3>Unconventional Magnetism</h3>
+          <p>Altermagnetism, excitonic magnetism, spin-orbital physics, and correlated magnetic phases.</p>
+          <span class="card-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="focus-card" href="research_interests.html">
+          <span class="focus-number">02</span>
+          <h3>Moiré Materials</h3>
+          <p>Correlated states, generalized Wigner crystals, and multi-orbital physics in twisted materials.</p>
+          <span class="card-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="focus-card" href="research_interests.html">
+          <span class="focus-number">03</span>
+          <h3>Quantum Simulation &amp; Annealing/Computation</h3>
+          <p>Quantum annealing and numerical many-body methods for non-equilibrium quantum dynamics.</p>
+          <span class="card-arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="software-section" id="software-development" aria-labelledby="software-heading">
+      <div class="software-heading">
+        <p class="home-eyebrow">Software Development</p>
+        <h2 id="software-heading">Research software</h2>
+      </div>
+      <article class="software-card">
+        <div>
+          <p class="software-name">SCS_Lanczos</p>
+          <h3>Exact diagonalization for strongly correlated systems</h3>
+          <p>A C++ research code for Lanczos and exact-diagonalization studies of interacting quantum lattice models.</p>
+        </div>
+        <div class="software-actions">
+          <a href="SCS_LanczosWebPage/index.html">Read documentation <span aria-hidden="true">→</span></a>
+          <a href="https://github.com/nkphys/SCS_Lanczos" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+    </section>
+
   </main>
 
   <footer>
@@ -54,4 +112,3 @@
   </footer>
 </body>
 </html>
-

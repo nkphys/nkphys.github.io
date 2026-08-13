@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Research Experience - Nitin Kaushal</title>
+  <title>Research Interests - Nitin Kaushal</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,47 +13,161 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="publications.html">Publications</a></li>
-        <li><a href="research_interests.html" class="active">Research Experience</a></li>
+        <li><a href="research_interests.html" class="active">Research Interests</a></li>
+        <li><a href="index.html#software-development">Software Development</a></li>
         <li><a href="cv.html">CV</a></li>
         <li><a href="Miscellaneous.html">Miscellaneous</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="container research-experience-content">
-    <h1>Research Experience</h1>
-
-    <section>
-      <h2>Overview</h2>
-      <p>I am a condensed matter theorist studying emergent quantum phases in correlated-electron lattice models. My work focuses on how electron correlations, multiple orbitals, and spin-orbit coupling shape ground-state and dynamical behavior in systems such as excitonic insulators, orbital-selective Mott phases, moiré Wigner crystals, and altermagnets. More recently, I have also explored quantum annealing for non-equilibrium spin dynamics near quantum criticality.</p>
-      <p>I use complementary numerical approaches: unbiased methods (DMRG and exact diagonalization/Lanczos) together with controlled approximate methods (unrestricted Hartree-Fock, Monte Carlo, and Langevin dynamics). This multi-method strategy allows me to address diverse regimes of quantum materials. I also developed the highly efficient exact diagonalization package <a href="https://github.com/nkphys/SCS_Lanczos" target="_blank"><em>SCS_Lanczos</em></a>, which has been used in several collaborative studies.</p>
+  <main class="research-page">
+    <section class="research-hero">
+      <p class="research-kicker">Condensed Matter Theory · Quantum Simulation</p>
+      <h1>Research Interests</h1>
+      <p class="research-lead">I study how interactions, orbital degrees of freedom, and spin-orbit coupling create unexpected phases of quantum matter.</p>
+      <p class="research-method-label">Techniques used</p>
+      <div class="method-list" aria-label="Research methods">
+        <span>Exact diagonalization</span>
+        <span>Density matrix renormalization group</span>
+        <span>Hartree–Fock</span>
+        <span>Monte Carlo</span>
+        <span>Quantum annealing/computation</span>
+      </div>
     </section>
 
-    <section>
-      <h2>Selected Research Topics</h2>
-      <h3>Altermagnetism in Modified Lieb Lattice Hubbard Model</h3>
-      <p>We investigated interaction-driven altermagnetism on the Lieb lattice as a model for quasi-2D oxychalcogenides. Using unrestricted Hartree-Fock and exact diagonalization, we identified spin-1/2 altermagnetic Mott insulating ground states at fillings of 2 and 4 electrons per unit cell.</p>
-      <p>We found characteristic spin splitting in both electronic and magnon spectra, consistent with an effective spin-1/2 Heisenberg description. We also obtained evidence for altermagnetic metallic behavior under electron and hole doping, including quasi-one-dimensional Fermi surfaces with $d_{x^2-y^2}$-wave spin splitting.</p>
+    <section class="research-overview">
+      <div>
+        <p class="section-label">Research program</p>
+        <h2>From microscopic models to emergent quantum phases</h2>
+      </div>
+      <div class="overview-copy">
+        <p>My work focuses on correlated-electron lattice models and the ground-state and dynamical behavior of excitonic insulators, orbital-selective Mott phases, moiré Wigner crystals, and altermagnets. More recently, I have also explored quantum annealing for non-equilibrium spin dynamics near quantum criticality.</p>
+        <p>I combine unbiased numerical methods with controlled approximations to reach complementary regimes. I also developed the efficient exact-diagonalization package <a href="https://github.com/nkphys/SCS_Lanczos" target="_blank" rel="noopener"><em>SCS_Lanczos</em></a>, used in several collaborative studies.</p>
+      </div>
     </section>
 
-    <section>
-      <h3>Generalized Wigner Crystals in Twisted Transition Metal Dichalcogenides</h3>
-      <p>We studied moiré Hubbard physics in $\Gamma$-valley twisted TMD homobilayers (MoS2, MoSe2, WS2), where honeycomb moiré bands host strong correlation effects. Within this framework, we predicted a sequence of generalized Wigner crystals at fractional fillings using unrestricted Hartree-Fock.</p>
-      <p>These predictions were later supported by experiments on twisted MoSe2 bilayers, alongside related observations in other $\Gamma$-valley systems. In complementary work, we derived a moiré Kanamori-Hubbard model through Wannierization of composite low-energy bands, extending the theoretical description beyond standard multiorbital models.</p>
-    </section>
+    <section class="research-topics" aria-labelledby="selected-work">
+      <div class="topics-heading">
+        <h2 id="selected-work">Selected work</h2>
+      </div>
 
-    <section>
-      <h3>Spin-Orbit Coupling Induced Magnetic Excitonic Insulator</h3>
-      <p>We studied multi-orbital Hubbard models with strong atomic spin-orbit coupling, motivated by 4d/5d transition-metal oxides where single-orbital descriptions are inadequate. Using DMRG and unrestricted Hartree-Fock, we established antiferromagnetism driven by spin-orbit exciton condensation at momentum $\pi$.</p>
-      <p>In follow-up studies with dynamical DMRG and exact diagonalization, we clarified the collective dynamics of the excitonic condensate and identified a multi-branch optical mode in addition to a low-energy Goldstone-like mode. This optical response provides a practical experimental fingerprint (e.g., for inelastic neutron scattering) in candidate materials including OsCl4, Sr3NaIrO6, Sr2YIrO6, Ba2YIrO6, and Ca2RuO4.</p>
-    </section>
+      <h2 class="research-direction">Unconventional Magnetism</h2>
 
-    <section>
-      <h3>Quantum Computation via Quantum Annealing</h3>
-      <p>We use coherent quantum annealing as a practical route to simulate non-equilibrium magnetic dynamics near quantum critical points. In collaboration with D-Wave Systems, we used superconducting annealers to study Schrödinger dynamics across multiple spin models, including higher-dimensional spin glasses.</p>
-      <p>By benchmarking against state-of-the-art classical methods (tensor-network approaches such as MPS/PEPS and neural-network methods), we observed area-law entanglement trends and identified regimes where classical computational cost rises rapidly. These results position quantum annealers as promising tools for dynamics that are difficult to simulate classically.</p>
-    </section>
+      <article class="research-card">
+        <div class="card-heading">
+          <span class="topic-number">01</span>
+          <div>
+            <p class="topic-tag">Multi-orbital correlations · Spin dynamics</p>
+            <h3>Spontaneous Altermagnetism in Correlated Electron Systems</h3>
+          </div>
+        </div>
+        <div class="split-feature">
+          <div class="card-copy">
+            <p>Our recent work explores how altermagnetism can emerge spontaneously in multi-orbital correlated systems. The interplay between spin and orbital order produces unconventional magnetic textures and distinct signatures in the collective spin excitation spectrum.</p>
+            <div class="paper-links">
+              <a href="https://arxiv.org/abs/2602.23522" target="_blank" rel="noopener">arXiv:2602.23522 <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <figure>
+            <img src="images/Research/AltermagnetismSpinOrbital_1.png" alt="Spin and orbital textures with calculated collective spin spectra in a multi-orbital altermagnet" loading="lazy">
+            <figcaption>Coupled spin-orbital order and its dynamical response.</figcaption>
+          </figure>
+        </div>
+      </article>
 
+      <article class="research-card featured-card">
+        <div class="card-heading">
+          <span class="topic-number">02</span>
+          <div>
+            <p class="topic-tag">Altermagnetism · Hubbard models</p>
+            <h3>Altermagnetism in a Modified Lieb Lattice</h3>
+          </div>
+        </div>
+        <div class="card-copy">
+          <p>We investigated interaction-driven altermagnetism on the Lieb lattice as a model for quasi-2D oxychalcogenides. Using unrestricted Hartree–Fock and exact diagonalization, we identified spin-1/2 altermagnetic Mott insulating ground states at fillings of two and four electrons per unit cell.</p>
+          <p>The characteristic spin splitting appears in both electronic and magnon spectra. Upon electron or hole doping, the model also supports altermagnetic metallic behavior with quasi-one-dimensional Fermi surfaces and <i>d</i><sub>x²−y²</sub>-wave spin splitting.</p>
+          <div class="paper-links">
+            <a href="https://journals.aps.org/prl/abstract/10.1103/s31h-hk2v" target="_blank" rel="noopener">Phys. Rev. Lett. 135, 156502 <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="research-gallery two-up">
+          <figure>
+            <img src="images/Research/AltermagnetismLieb_1.png" alt="Momentum-space spin splitting and effective-chain picture for the doped modified Lieb lattice" loading="lazy">
+            <figcaption>Spin-split Fermi surface and the effective-chain description.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/Research/AltermagnetismLieb_2.png" alt="Calculated dynamical spin structure factors for two sublattices of the modified Lieb lattice" loading="lazy">
+            <figcaption>Sublattice-resolved magnon spectra reveal altermagnetic splitting.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="research-card text-card">
+        <div class="card-heading">
+          <span class="topic-number">03</span>
+          <div>
+            <p class="topic-tag">Spin-orbit coupling · Excitonic phases</p>
+            <h3>Magnetic Excitonic Insulators</h3>
+          </div>
+        </div>
+        <div class="card-copy columns">
+          <p>Using DMRG and unrestricted Hartree–Fock, we established antiferromagnetism driven by spin-orbit exciton condensation at momentum π in multi-orbital Hubbard models motivated by 4d/5d transition-metal oxides.</p>
+          <p>Follow-up dynamical DMRG and exact-diagonalization studies revealed a multi-branch optical mode alongside a low-energy Goldstone-like mode—an experimental fingerprint for candidate excitonic materials.</p>
+        </div>
+        <div class="paper-links">
+          <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.101.245147" target="_blank" rel="noopener">Phys. Rev. B 101, 245147 <span aria-hidden="true">↗</span></a>
+          <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.104.235135" target="_blank" rel="noopener">Phys. Rev. B 104, 235135 <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <h2 class="research-direction">Moiré Materials</h2>
+
+      <article class="research-card text-card">
+        <div class="card-heading">
+          <span class="topic-number">04</span>
+          <div>
+            <p class="topic-tag">Moiré materials · Wigner crystallization</p>
+            <h3>Generalized Wigner Crystals and Mott states in Twisted TMDs</h3>
+          </div>
+        </div>
+        <div class="card-copy columns">
+          <p>We studied moiré Hubbard physics in Γ-valley twisted TMD homobilayers—MoS<sub>2</sub>, MoSe<sub>2</sub>, and WS<sub>2</sub>—where honeycomb moiré bands host strong correlation effects. We predicted a sequence of generalized Wigner crystals at fractional fillings using unrestricted Hartree–Fock.</p>
+          <p>These predictions were later supported by experiments on twisted MoSe<sub>2</sub> bilayers. In complementary work, we derived a moiré Kanamori–Hubbard model through Wannierization of composite low-energy bands.</p>
+        </div>
+        <div class="paper-links">
+          <a href="https://www.nature.com/articles/s42005-022-01065-0" target="_blank" rel="noopener">Commun. Phys. 5, 289 <span aria-hidden="true">↗</span></a>
+          <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.107.L201118" target="_blank" rel="noopener">Phys. Rev. B 107, L201118 <span aria-hidden="true">↗</span></a>
+          <a href="https://arxiv.org/abs/2504.17970" target="_blank" rel="noopener">arXiv:2504.17970 <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="research-gallery">
+          <figure>
+            <img src="images/Research/Moire_MoSe2Twisted.png" alt="Twisted MoSe2 bilayer structure with high-symmetry stacking regions and the resulting moiré potential" loading="lazy">
+            <figcaption>Twisted MoSe<sub>2</sub> lattice and the emergent moiré potential.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <h2 class="research-direction">Quantum Simulation &amp; Annealing/Computation</h2>
+
+      <article class="research-card text-card">
+        <div class="card-heading">
+          <span class="topic-number">05</span>
+          <div>
+            <p class="topic-tag">Quantum simulation · Non-equilibrium dynamics</p>
+            <h3>Quantum Computation via Quantum Annealing</h3>
+          </div>
+        </div>
+        <div class="card-copy columns">
+          <p>In collaboration with D-Wave Systems, we use coherent quantum annealing to simulate non-equilibrium magnetic dynamics near quantum critical points across several spin models, including higher-dimensional spin glasses.</p>
+          <p>Benchmarks against tensor-network and neural-network approaches reveal area-law entanglement trends and regimes where classical computational cost rises rapidly, positioning quantum annealers as promising tools for difficult quantum dynamics.</p>
+        </div>
+        <div class="paper-links">
+          <a href="https://www.science.org/doi/10.1126/science.adi8440" target="_blank" rel="noopener">Science 388, 199–204 <span aria-hidden="true">↗</span></a>
+          <a href="https://www.nature.com/articles/s41534-025-00900-w" target="_blank" rel="noopener">npj Quantum Information 11, 38 <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+    </section>
   </main>
 
   <footer>
@@ -61,4 +175,3 @@
   </footer>
 </body>
 </html>
-

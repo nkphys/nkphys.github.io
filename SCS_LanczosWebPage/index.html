@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Documentation for SCS_Lanczos, an exact-diagonalization and Lanczos code for strongly correlated systems.">
+  <title>SCS_Lanczos Documentation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="docs-header">
+    <a class="docs-brand" href="index.html">SCS_Lanczos <span>Documentation</span></a>
+    <nav aria-label="Documentation navigation">
+      <a href="#overview">Overview</a>
+      <a href="#start">Getting started</a>
+      <a href="#structure">Code structure</a>
+      <a href="https://github.com/nkphys/SCS_Lanczos" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="../index.html">Nitin Kaushal</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="docs-hero">
+      <p class="eyebrow">Exact diagonalization for quantum many-body systems</p>
+      <h1>SCS_Lanczos</h1>
+      <p class="lead">A C++ research code for solving models of strongly correlated systems with Lanczos-based and exact-diagonalization techniques.</p>
+      <div class="hero-actions">
+        <a class="primary" href="#start">Get started</a>
+        <a href="https://github.com/nkphys/SCS_Lanczos" target="_blank" rel="noopener">View source code</a>
+      </div>
+      <p class="notice"><strong>Documentation status:</strong> This is a preliminary guide. Detailed model-specific inputs and examples will be added progressively.</p>
+    </section>
+
+    <div class="docs-layout">
+      <aside>
+        <p>On this page</p>
+        <a href="#overview">Overview</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#start">Getting started</a>
+        <a href="#workflow">Typical workflow</a>
+        <a href="#structure">Repository structure</a>
+        <a href="#support">Support</a>
+      </aside>
+
+      <div class="docs-content">
+        <section id="overview">
+          <p class="section-label">Introduction</p>
+          <h2>Overview</h2>
+          <p><strong>SCS</strong> stands for <strong>Strongly Correlated Systems</strong>. SCS_Lanczos is developed by Nitin Kaushal to study interacting quantum lattice models. It supports Lanczos calculations for larger Hilbert spaces and full exact diagonalization for sufficiently small systems.</p>
+          <p>The project is under active research development. Users should validate convergence, symmetry sectors, model parameters, and observables for their particular calculation.</p>
+        </section>
+
+        <section id="capabilities">
+          <p class="section-label">What it provides</p>
+          <h2>Capabilities</h2>
+          <div class="feature-grid">
+            <article>
+              <h3>Ground-state calculations</h3>
+              <p>Lanczos eigensolvers for sparse many-body Hamiltonians and full-spectrum calculations for small systems.</p>
+            </article>
+            <article>
+              <h3>Static and dynamical observables</h3>
+              <p>Infrastructure for evaluating correlation functions and frequency-dependent response.</p>
+            </article>
+            <article>
+              <h3>Finite-temperature methods</h3>
+              <p>Finite-temperature and low-temperature Lanczos components are included in the source tree.</p>
+            </article>
+            <article>
+              <h3>Time evolution</h3>
+              <p>Time-dependent Lanczos components support studies of non-equilibrium quantum dynamics.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="start">
+          <p class="section-label">Installation</p>
+          <h2>Getting started</h2>
+          <h3>1. Obtain the source</h3>
+          <pre><code>git clone https://github.com/nkphys/SCS_Lanczos.git
+cd SCS_Lanczos</code></pre>
+
+          <h3>2. Review the build configuration</h3>
+          <p>The repository provides a <code>Makefile</code>. Review its compiler and library settings for your workstation or computing cluster, then build from the project root:</p>
+          <pre><code>make</code></pre>
+
+          <h3>3. Choose an example input</h3>
+          <p>Example parameter files are available in the <code>input_files/</code> directory and at the repository root. Begin with the example closest to your target model, retain a copy, and modify parameters incrementally.</p>
+          <div class="callout">
+            <strong>Before running:</strong> Consult the repository README and the selected model source for current input requirements. Model-specific run commands will be documented here as tested examples are added.
+          </div>
+        </section>
+
+        <section id="workflow">
+          <p class="section-label">Usage</p>
+          <h2>Typical workflow</h2>
+          <ol class="steps">
+            <li><span>01</span><div><strong>Select a model</strong><p>Identify the implementation in <code>models/</code> that matches the physical system.</p></div></li>
+            <li><span>02</span><div><strong>Define the basis and sector</strong><p>Set lattice size, particle numbers, conserved quantum numbers, and boundary conditions.</p></div></li>
+            <li><span>03</span><div><strong>Prepare the input</strong><p>Start from a provided input file and specify couplings and requested observables.</p></div></li>
+            <li><span>04</span><div><strong>Run and validate</strong><p>Check convergence and benchmark small systems against full exact diagonalization where practical.</p></div></li>
+          </ol>
+        </section>
+
+        <section id="structure">
+          <p class="section-label">Reference</p>
+          <h2>Repository structure</h2>
+          <div class="file-list">
+            <div><code>models/</code><span>Model-specific Hamiltonians and observables</span></div>
+            <div><code>basis/</code><span>Many-body basis implementations</span></div>
+            <div><code>input_files/</code><span>Example input configurations</span></div>
+            <div><code>Lanczos_engine.*</code><span>Core Lanczos implementation</span></div>
+            <div><code>FTLM_* / LTLM_*</code><span>Finite- and low-temperature Lanczos components</span></div>
+            <div><code>TimeDependentLanczos.*</code><span>Time-evolution components</span></div>
+          </div>
+        </section>
+
+        <section id="support">
+          <p class="section-label">Help and attribution</p>
+          <h2>Support</h2>
+          <p>For questions about using SCS_Lanczos, contact <a href="mailto:kaushalnitin002@gmail.com">kaushalnitin002@gmail.com</a>. When reporting a problem, include the model, input file, compiler information, and the relevant output or error message.</p>
+          <p>Source code and development history are available in the <a href="https://github.com/nkphys/SCS_Lanczos" target="_blank" rel="noopener">SCS_Lanczos GitHub repository</a>.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <span>SCS_Lanczos documentation</span>
+    <a href="../index.html">Nitin Kaushal</a>
+  </footer>
+</body>
+</html>
