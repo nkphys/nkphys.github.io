@@ -1033,6 +1033,17 @@ footer {
   line-height: 1.65;
 }
 
+.software-card .software-role {
+  display: inline-block;
+  margin-top: 0.65rem;
+  padding: 0.3rem 0.55rem;
+  border: 1px solid #c8dbe4;
+  border-radius: 3px;
+  color: #405d6d;
+  background: #f1f6f8;
+  font-size: 0.78rem;
+}
+
 .software-actions {
   display: flex;
   flex-wrap: wrap;
