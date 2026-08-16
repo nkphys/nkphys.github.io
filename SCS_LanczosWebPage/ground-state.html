@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ground-state calculation examples for spin, Hubbard, and t-J models in SCS_Lanczos.">
+  <title>Ground-state calculations | SCS_Lanczos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="docs-header">
+    <a class="docs-brand" href="index.html">SCS_Lanczos <span>Documentation</span></a>
+    <nav aria-label="Documentation navigation">
+      <a href="index.html">Overview</a>
+      <a href="#examples">Examples</a>
+      <a href="#spin-model">Spin model</a>
+      <a href="https://github.com/nkphys/SCS_Lanczos" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="../index.html">Nitin Kaushal</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="docs-hero compact-hero">
+      <p class="eyebrow">Capabilities · Ground state</p>
+      <h1>Ground-state calculations</h1>
+      <p class="lead">Worked examples for obtaining ground-state energies and eigenvectors with the Lanczos method in SCS_Lanczos.</p>
+      <div class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="index.html">Documentation</a>
+        <span aria-hidden="true">/</span>
+        <span>Ground-state calculations</span>
+      </div>
+    </section>
+
+    <div class="docs-layout">
+      <aside>
+        <p>On this page</p>
+        <a href="#examples">Model examples</a>
+        <a href="#spin-model">Spin model</a>
+        <a href="#spin-definition">Model definition</a>
+        <a href="#spin-input">Input file</a>
+        <a href="#spin-run">Build and run</a>
+        <a href="#spin-output">Output</a>
+        <a href="#validation">Validation</a>
+      </aside>
+
+      <div class="docs-content">
+        <section id="examples">
+          <p class="section-label">Choose a model</p>
+          <h2>Ground-state examples</h2>
+          <p>The examples follow a common workflow—select the model and symmetry sector, prepare the input, run Lanczos, and inspect the converged ground state.</p>
+
+          <div class="example-grid">
+            <a class="example-card current" href="#spin-model">
+              <span class="example-status">Detailed example</span>
+              <h3>Spin model</h3>
+              <p>Ground-state calculation using the <code>Model_Spins</code> implementation.</p>
+              <span class="example-link">Open example →</span>
+            </a>
+            <article class="example-card">
+              <span class="example-status planned">Planned</span>
+              <h3>Hubbard model</h3>
+              <p>One-orbital Hubbard ground state with a fixed particle-number sector.</p>
+              <span class="example-link muted">Example to be added</span>
+            </article>
+            <article class="example-card">
+              <span class="example-status planned">Planned</span>
+              <h3><i>t</i>–<i>J</i> model</h3>
+              <p>Projected-fermion ground state using the <code>Model_1_orb_tJ</code> implementation.</p>
+              <span class="example-link muted">Example to be added</span>
+            </article>
+          </div>
+        </section>
+
+        <section id="spin-model">
+          <p class="section-label">Worked example 01</p>
+          <h2>Spin-model ground state</h2>
+          <p>This example documents a complete spin-model calculation, from defining the Hamiltonian and lattice to checking the final ground-state energy. The exact input listing and commands will be filled using a tested SCS_Lanczos run.</p>
+
+          <div class="example-progress" aria-label="Documentation progress">
+            <span class="done">1. Model route</span>
+            <span>2. Physical parameters</span>
+            <span>3. Input file</span>
+            <span>4. Run command</span>
+            <span>5. Expected output</span>
+          </div>
+        </section>
+
+        <section id="spin-definition">
+          <p class="section-label">Step 1</p>
+          <h2>Define the spin model</h2>
+          <div class="parameter-table">
+            <div><strong>Code implementation</strong><code>models/Model_Spins.*</code></div>
+            <div><strong>Hamiltonian</strong><span class="to-document">To be specified for this example</span></div>
+            <div><strong>Lattice and size</strong><span class="to-document">To be specified</span></div>
+            <div><strong>Boundary condition</strong><span class="to-document">To be specified</span></div>
+            <div><strong>Symmetry sector</strong><span class="to-document">To be specified</span></div>
+          </div>
+          <div class="callout">
+            The documentation will state all conventions explicitly, including site numbering, bond ordering, the sign and normalization of exchange couplings, and the selected spin sector.
+          </div>
+        </section>
+
+        <section id="spin-input">
+          <p class="section-label">Step 2</p>
+          <h2>Prepare the input file</h2>
+          <p>The tested input file will be reproduced here in full. Each active parameter will be explained directly below the listing.</p>
+          <pre class="placeholder-code"><code># Spin-model input example
+# A tested input file will be inserted here.</code></pre>
+
+          <h3>Parameters to document</h3>
+          <div class="checklist">
+            <div><span></span>Model selector</div>
+            <div><span></span>Number of sites</div>
+            <div><span></span>Spin or target S<sup>z</sup> sector</div>
+            <div><span></span>Exchange connections and couplings</div>
+            <div><span></span>Lanczos convergence controls</div>
+            <div><span></span>Requested eigenvalues and eigenvectors</div>
+          </div>
+        </section>
+
+        <section id="spin-run">
+          <p class="section-label">Step 3</p>
+          <h2>Build and run</h2>
+          <p>The exact compile target and executable invocation will be shown here after verifying the example against the current repository version.</p>
+          <pre class="placeholder-code"><code># Build command
+make
+
+# Model-specific run command
+# To be added from a tested run</code></pre>
+        </section>
+
+        <section id="spin-output">
+          <p class="section-label">Step 4</p>
+          <h2>Read the output</h2>
+          <p>The completed example will identify the lines reporting the Hilbert-space size, Lanczos iterations, convergence, ground-state energy, and saved eigenvector information.</p>
+          <div class="output-fields">
+            <div><code>Basis size</code><span>Confirms the selected Hilbert space and symmetry sector.</span></div>
+            <div><code>Iteration</code><span>Tracks convergence of the lowest Ritz value.</span></div>
+            <div><code>E0</code><span>Ground-state energy for the chosen parameters.</span></div>
+            <div><code>Residual / tolerance</code><span>Confirms numerical convergence.</span></div>
+          </div>
+        </section>
+
+        <section id="validation">
+          <p class="section-label">Step 5</p>
+          <h2>Validation checklist</h2>
+          <ol class="validation-list">
+            <li>Confirm that the basis dimension matches the intended spin sector.</li>
+            <li>Repeat with a tighter Lanczos tolerance and verify that the reported energy is stable.</li>
+            <li>For a small lattice, compare with the full exact-diagonalization result.</li>
+            <li>Check the energy against a known analytic limit or benchmark when available.</li>
+            <li>Record the code revision, input file, and output together for reproducibility.</li>
+          </ol>
+        </section>
+
+        <section class="next-input">
+          <p class="section-label">Next documentation step</p>
+          <h2>Complete the tested Spin-model example</h2>
+          <p>To replace the placeholders, we will add one working input file, the corresponding run command, and a short representative output from SCS_Lanczos.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <span>SCS_Lanczos documentation</span>
+    <a href="index.html">Documentation home</a>
+  </footer>
+  <script data-goatcounter="https://nkphys.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>

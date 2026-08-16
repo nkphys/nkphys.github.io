@@ -210,6 +210,223 @@ aside a {
   font-size: 0.88rem;
 }
 
+.feature-card.featured {
+  border-color: #9ebdcb;
+  background: #f6fafb;
+}
+
+.feature-card a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--blue);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.feature-card a:hover {
+  text-decoration: underline;
+}
+
+.compact-hero {
+  padding-block: clamp(2.5rem, 5vw, 4rem);
+}
+
+.compact-hero h1 {
+  max-width: 850px;
+  font-size: clamp(2.2rem, 5vw, 3.7rem);
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 1.6rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+}
+
+.example-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+.example-card {
+  display: flex;
+  min-height: 220px;
+  flex-direction: column;
+  padding: 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  color: var(--ink);
+  background: var(--white);
+  text-decoration: none;
+}
+
+.example-card.current {
+  border-top: 3px solid var(--blue);
+}
+
+.example-card h3,
+.example-card p {
+  margin: 0;
+}
+
+.example-card h3 {
+  margin-top: 1.25rem;
+  font-size: 1.05rem;
+}
+
+.example-card p {
+  margin-top: 0.45rem;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.example-status {
+  align-self: flex-start;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  color: #235f7e;
+  background: #e8f3f7;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.example-status.planned {
+  color: #687780;
+  background: #edf1f2;
+}
+
+.example-link {
+  margin-top: auto;
+  padding-top: 1rem;
+  color: var(--blue);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.example-link.muted {
+  color: #7a898f;
+}
+
+.example-progress {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 1.3rem;
+}
+
+.example-progress span {
+  padding: 0.35rem 0.55rem;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  color: #6d7e87;
+  background: #f7f9fa;
+  font-size: 0.72rem;
+}
+
+.example-progress .done {
+  color: #245f7c;
+  border-color: #a9c7d4;
+  background: #edf6f9;
+}
+
+.parameter-table {
+  margin-top: 1.3rem;
+  border-top: 1px solid var(--line);
+}
+
+.parameter-table > div {
+  display: grid;
+  grid-template-columns: minmax(170px, 0.7fr) 1.5fr;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.88rem;
+}
+
+.to-document {
+  color: #77868e;
+  font-style: italic;
+}
+
+.placeholder-code {
+  border-color: #81949f;
+  color: #dce7ec;
+  background: #293b46;
+}
+
+.checklist {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+  margin-top: 0.9rem;
+}
+
+.checklist div {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  color: #526670;
+  background: var(--white);
+  font-size: 0.82rem;
+}
+
+.checklist div > span {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #92a7b2;
+  border-radius: 2px;
+}
+
+.output-fields {
+  margin-top: 1.2rem;
+  border-top: 1px solid var(--line);
+}
+
+.output-fields div {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 1rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.output-fields code {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.validation-list {
+  padding-left: 1.3rem;
+}
+
+.validation-list li {
+  padding: 0.4rem 0 0.4rem 0.35rem;
+  color: #435762;
+}
+
+.next-input {
+  padding: 1.5rem !important;
+  border: 1px solid #bdd1da !important;
+  border-radius: 5px;
+  background: #f2f8fa;
+}
+
 pre {
   overflow-x: auto;
   padding: 1rem;
@@ -316,6 +533,17 @@ footer {
 
   .feature-grid {
     grid-template-columns: 1fr;
+  }
+
+  .example-grid,
+  .checklist {
+    grid-template-columns: 1fr;
+  }
+
+  .parameter-table > div,
+  .output-fields div {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
   }
 
   .file-list div {
