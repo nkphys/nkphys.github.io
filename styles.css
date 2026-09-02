@@ -278,7 +278,7 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
-  counter-reset: publication 32;
+  counter-reset: publication 34;
 }
 
 .publication-list h3 {
